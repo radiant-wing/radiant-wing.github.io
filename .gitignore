@@ -1,0 +1,36 @@
+# IDE artifacts
+.DS*
+._.DS*
+*.swp
+.idea
+.project
+.vscode
+.history
+.tags
+
+# Local caches
+.sass-cache
+.cache
+
+# Upstream dependencies
+vendor
+node_modules
+.bundle
+
+# Log files
+npm-debug.log
+yarn-error.log
+logs/
+
+# Local database files and archives
+*.sql
+*.sql.gz
+*.tar.gz
+*.zip
+
+# Git files
+.gitattributes
+*.diff
+*.orig
+*.rej
+interdiff*.txt

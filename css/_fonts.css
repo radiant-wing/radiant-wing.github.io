@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "roboto-light";
+  src: url("../fonts/roboto/Roboto-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "roboto-light-italic";
+  src: url("../fonts/roboto/Roboto-LightItalic.ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "roboto-regular";
+  src: url("../fonts/roboto/Roboto-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "roboto-regular-italic";
+  src: url("../fonts/roboto/Roboto-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "roboto-bold";
+  src: url("../fonts/roboto/Roboto-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "roboto-bold-italic";
+  src: url("../fonts/roboto/Roboto-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "raleway-regular";
+  src: url("../fonts/raleway/Raleway-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  /* font-optical-sizing: auto; */
+}
+
+@font-face {
+  font-family: "raleway-regular-italic";
+  src: url("../fonts/raleway/Raleway-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+  /* font-optical-sizing: auto; */
+}
+
+@font-face {
+  font-family: "raleway-bold";
+  src: url("../fonts/raleway/Raleway-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  /* font-optical-sizing: auto; */
+}
+
+@font-face {
+  font-family: "raleway-bold-italic";
+  src: url("../fonts/raleway/Raleway-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+  /* font-optical-sizing: auto; */
+}
+
+@font-face {
+  font-family: "notosans-regular";
+  src: url("../fonts/noto_sans/NotoSansMono-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  /* font-optical-sizing: auto; */
+}
+
+@font-face {
+  font-family: "notosans-bold";
+  src: url("../fonts/noto_sans/NotoSansMono-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  /* font-optical-sizing: auto; */
+}

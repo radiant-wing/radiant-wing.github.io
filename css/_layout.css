@@ -1,0 +1,140 @@
+/*
+  Creates a repeating grid with configurable number of columns and gap size.
+  
+  Default variables (defined in _theme.css):
+  --layout-default-repeat: the number of columns
+  --layout-default-gap: the gap between columns
+
+  Variables to override the defaults:
+  --grid-repeat: overrides --layout-default-repeat
+  --grid-gap: overrides --layout-default-gap
+*/
+.repeating-grid {
+  /* Sets the number of columns in the grid. */
+  --_grid-repeat: var(--grid-repeat, var(--layout-default-repeat));
+
+  /* Sets the gap size between columns. */
+  --_repeating-grid-gap: var(--grid-gap, var(--layout-default-gap));
+
+
+  display: grid;
+  /*
+    Repeat function sets the number of columns, sized at 1 fraction each.
+  */
+  grid-template-columns: repeat(var(--_grid-repeat), 1fr);
+  gap: var(--_repeating-grid-gap);
+}
+
+/*
+  Creates a repeating flexbox grid with configurable number of columns and gap size.
+  Final row fills the available space.
+
+  Default variables (defined in _theme.css):
+  --layout-default-repeat: the number of columns
+  --layout-default-gap: the gap between columns
+
+  Variables to override the defaults:
+  --flex-repeat: overrides --layout-default-repeat
+  --flex-gap: overrides --layout-default-gap
+*/
+.repeating-flex {
+  /* Sets the number of columns in the flexbox grid. */
+  --_flex-repeat: var(--flex-repeat, var(--layout-default-repeat));
+
+  /* Sets the gap size between columns. */
+  --_repeating-flex-gap: var(--flex-gap, var(--layout-default-gap));
+
+  /* Determines the number of gaps in the flexbox grid. */
+  --_gap-count: calc(var(--_flex-repeat) - 1);
+
+  /* 
+    Calculates the total gap size
+    Total gap area = Gap size / num columns * num gaps
+    3vmax / 3 * 2
+  */
+  --_gap-repeater-calc: calc(
+      var(--_repeating-flex-gap) / var(--_flex-repeat) * var(--_gap-count)
+  );
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--_repeating-flex-gap);
+
+  /*
+    Setting the flex-grow, flex-shrink, and flex-basis (ideal size) of
+    the flex items.
+    (100% of parent width / num columns) - total gap area
+  */
+
+  > * {
+    flex: 1 1 calc((100% / var(--_flex-repeat)) - var(--_gap-repeater-calc));
+  }
+}
+
+/*
+  Creates a fluid grid with configurable minimum column width and gap size.
+  The number of columns will be determined by the available space.
+
+  Default variables (defined in _theme.css)
+  --layout-fluid-min: the minimum column width
+  --layout-default-gap: the gap between columns
+
+  Variables to override the defaults:
+  --fluid-grid-min: overrides --layout-fluid-min
+  --grid-gap: overrides --layout-default-gap
+*/
+.fluid-grid {
+  /* Sets the minimum column width */
+  --_fluid-grid-min: var(--fluid-grid-min, var(--layout-fluid-min));
+
+  /* Sets the gap size between columns. */
+  --_fluid-grid-gap: var(--grid-gap, var(--layout-default-gap));
+
+  display: grid;
+
+  /*
+    Auto-fit in the repeat function fits as many columns as space allows.
+    The size is calculated by minmax, which sets a range between
+    - minimum: the --_fluid-grid-min var, falling back to 100%
+    - maximum: 1 fraction
+  */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(var(--_fluid-grid-min), 100%), 1fr)
+  );
+  gap: var(--_fluid-grid-gap);
+}
+
+
+/*
+  Creates a fluid flexbox grid with configurable minimum column width and gap size.
+  The number of columns will be determined by the available space.
+  Final row fills the available space.
+
+  Default variables (defined in _theme.css)
+  --layout-fluid-min: the minimum column width
+  --layout-default-gap: the gap between columns
+
+  Variables to override the defaults:
+  --fluid-flex-min: overrides --layout-fluid-min
+  --flex-gap: overrides --layout-default-gap
+*/
+.fluid-flex {
+  --_fluid-flex-min: var(--fluid-flex-min, var(--layout-fluid-min));
+  --_fluid-flex-gap: var(--flex-gap, var(--layout-default-gap));
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--_fluid-flex-gap);
+
+  > * {
+    flex: 1 1 var(--_fluid-flex-min);
+  }
+}
+
+
+
+
+
+
+

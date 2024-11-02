@@ -1,0 +1,29 @@
+.debug { border: 3px solid red; }
+
+.bkg-blue {
+  background-color: var(--rws-blue);
+}
+
+.bkg-green {
+  background-color: var(--rws-green);
+}
+
+.bkg-white {
+  background-color: var(--rws-white);
+}
+
+.bkg-orange {
+  background-color: var(--rws-orange);
+}
+
+.bkg-red {
+  background-color: var(--rws-red);
+}
+
+.drop-shadow {
+  box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, .4);
+}
+
+.txt-light {
+  color: var(--rws-white);
+}

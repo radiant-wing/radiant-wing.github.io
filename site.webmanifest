@@ -1,0 +1,27 @@
+{
+  "short_name": "RWS",
+  "name": "Radiant Wing Solutions",
+  "description": "Innovative scheduling, flight logging, and management tools for pilots.",
+  "icons": [
+    {
+      "src": "/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/icon-mask.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "https://www.radiantwing.com",
+  "display": "browser",
+  "theme_color": "#F2DFBB",
+  "background_color": "#ffffff"
+}
